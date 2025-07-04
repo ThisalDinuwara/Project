@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kandu Pinnawala - Authentic Sri Lankan Handicrafts</title>
+    <meta name="description" content="Discover authentic Sri Lankan handicrafts at Kandu Pinnawala. Traditional masks, pottery, batik art, and more. Quality handmade products from skilled artisans.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm" id="navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#home">
+                <img src="C:\Users\Admin\Desktop\project\image\logo-removebg-preview.png" style="height: 40px;" class="me-2">
+                <span class="fw-bold fs-4">Kandu Pinnawala</span>
+            </a>
+
+            <!-- Search Bar -->
+            <div class="d-none d-lg-flex flex-grow-1 mx-4">
+                <div class="input-group" style="max-width: 400px;">
+                    <span class="input-group-text bg-light border-end-0">
+                        <i class="bi bi-search text-muted"></i>
+                    </span>
+                    <input type="text" class="form-control border-start-0" placeholder="Search handicrafts..." id="searchInput">
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center">
+                <!-- Theme Toggle -->
+                <button class="btn btn-outline-secondary me-3" id="themeToggle">
+                    <i class="bi bi-sun-fill" id="themeIcon"></i>
+                </button>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Mobile Search -->
+                <div class="d-lg-none mt-3">
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="bi bi-search"></i>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Search handicrafts...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row justify-content-center min-vh-100 pt-5">
+                <div class="col-lg-8 text-center">
+                    <!-- Hero Image - Centered and at the top -->
+                    <div class="hero-image mb-5">
+                        <div class="position-relative d-inline-block">
+                            <div class="hero-image-bg"></div>
+                            <img src="https://lk.lakpura.com/cdn/shop/files/Raksha.jpg?v=1697704607&width=3200?auto=compress&cs=tinysrgb&w=800" 
+                                 alt="Traditional Sri Lankan Handicrafts" class="img-fluid rounded-3 shadow-lg hero-main-image">
+                        </div>
+                    </div>
+
+                    <!-- Hero Content -->
+                    <div class="hero-content">
+                        <div class="d-flex align-items-center justify-content-center mb-3">
+                            <div class="text-warning me-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <span class="text-muted">Authentic Sri Lankan Handicrafts</span>
+                        </div>
+                        
+                        <h1 class="display-3 fw-bold mb-4">
+                            Discover the Beauty of
+                            <span class="text-warning d-block">Traditional Crafts</span>
+                        </h1>
+                        
+                        <p class="lead mb-4 mx-auto" style="max-width: 600px;">
+                            Explore our exquisite collection of handmade treasures, where every piece tells a story of Sri Lankan heritage and craftsmanship passed down through generations.
+                        </p>
+
+                        <div class="d-flex flex-column flex-sm-row gap-3 mb-5 justify-content-center">
+                            <a href="#products" class="btn btn-warning btn-lg px-4">
+                                Explore Products
+                                <i class="bi bi-arrow-right ms-2"></i>
+                            </a>
+                            <a href="#about" class="btn btn-outline-warning btn-lg px-4">
+                                Learn Our Story
+                            </a>
+                        </div>
+
+                        <div class="row text-center justify-content-center">
+                            <div class="col-4 col-md-2">
+                                <div class="h2 fw-bold text-warning">500+</div>
+                                <div class="text-muted">Products</div>
+                            </div>
+                            <div class="col-4 col-md-2">
+                                <div class="h2 fw-bold text-warning">50+</div>
+                                <div class="text-muted">Artisans</div>
+                            </div>
+                            <div class="col-4 col-md-2">
+                                <div class="h2 fw-bold text-warning">20+</div>
+                                <div class="text-muted">Years</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bold mb-3">Our Handcrafted Collection</h2>
+                <p class="lead">Discover authentic Sri Lankan handicrafts made by skilled artisans using traditional techniques passed down through generations.</p>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="d-flex flex-wrap justify-content-center gap-2 mb-5" id="categoryFilter">
+                <button class="btn btn-warning active" data-category="all">All Products</button>
+                <button class="btn btn-outline-warning" data-category="masks">Masks</button>
+                <button class="btn btn-outline-warning" data-category="bowls">Bowls</button>
+                <button class="btn btn-outline-warning" data-category="textile">Textiles</button>
+                <button class="btn btn-outline-warning" data-category="carvings">Carvings</button>
+                <button class="btn btn-outline-warning" data-category="pottery">Pottery</button>
+                <button class="btn btn-outline-warning" data-category="baskets">Baskets</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="row g-4" id="productsGrid">
+                <div class="col-md-6 col-lg-4 product-item" data-category="masks">
+                    <div class="card h-100 shadow-sm product-card">
+                        <div class="position-relative overflow-hidden">
+                            <img src="C:\Users\Admin\Desktop\project\image\P1230247.jpg" auto=compress&cs=tinysrgb&w=800 
+                                 class="card-img-top product-image" alt="Traditional Wooden Mask">
+                            <div class="product-overlay">
+                                <button class="btn btn-light btn-sm rounded-circle me-2">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                                <button class="btn btn-light btn-sm rounded-circle">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Traditional Wooden Mask</h5>
+                            <p class="card-text text-muted">Handcrafted traditional Sri Lankan mask</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-warning mb-0">Rs. 2,500</span>
+                                <button class="btn btn-warning btn-sm">
+                                    <i class="bi bi-cart-plus me-1"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 product-item" data-category="bowls">
+                    <div class="card h-100 shadow-sm product-card">
+                        <div class="position-relative overflow-hidden">
+                            <img src="C:\Users\Admin\Desktop\project\image\coconut bowl.jpg"?auto=compress&cs=tinysrgb&w=800 
+                                 class="card-img-top product-image" alt="Coconut Shell Bowl">
+                            <div class="product-overlay">
+                                <button class="btn btn-light btn-sm rounded-circle me-2">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                                <button class="btn btn-light btn-sm rounded-circle">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Coconut Shell Bowl</h5>
+                            <p class="card-text text-muted">Eco-friendly coconut shell bowl</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-warning mb-0">Rs. 800</span>
+                                <button class="btn btn-warning btn-sm">
+                                    <i class="bi bi-cart-plus me-1"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 product-item" data-category="textile">
+                    <div class="card h-100 shadow-sm product-card">
+                        <div class="position-relative overflow-hidden">
+                            <img src="C:\Users\Admin\Desktop\project\image\wall hanger.jpg"?auto=compress&cs=tinysrgb&w=800
+                                 class="card-img-top product-image" alt="Batik Wall Hanging">
+                            <div class="product-overlay">
+                                <button class="btn btn-light btn-sm rounded-circle me-2">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                                <button class="btn btn-light btn-sm rounded-circle">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Batik Wall Hanging</h5>
+                            <p class="card-text text-muted">Beautiful batik art piece</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-warning mb-0">Rs. 3,200</span>
+                                <button class="btn btn-warning btn-sm">
+                                    <i class="bi bi-cart-plus me-1"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 product-item" data-category="carvings">
+                    <div class="card h-100 shadow-sm product-card">
+                        <div class="position-relative overflow-hidden">
+                            <img src="C:\Users\Admin\Desktop\project\image\wood carving1.jpg"?auto=compress&cs=tinysrgb&w=800 
+                                 class="card-img-top product-image" alt="Wooden Elephant Carving">
+                            <div class="product-overlay">
+                                <button class="btn btn-light btn-sm rounded-circle me-2">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                                <button class="btn btn-light btn-sm rounded-circle">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Wooden Elephant Carving</h5>
+                            <p class="card-text text-muted">Hand-carved wooden elephant</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-warning mb-0">Rs. 1,800</span>
+                                <button class="btn btn-warning btn-sm">
+                                    <i class="bi bi-cart-plus me-1"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 product-item" data-category="pottery">
+                    <div class="card h-100 shadow-sm product-card">
+                        <div class="position-relative overflow-hidden">
+                            <img src="C:\Users\Admin\Desktop\project\image\pottery.webp"?auto=compress&cs=tinysrgb&w=800 
+                                 class="card-img-top product-image" alt="Clay Pottery Set">
+                            <div class="product-overlay">
+                                <button class="btn btn-light btn-sm rounded-circle me-2">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                                <button class="btn btn-light btn-sm rounded-circle">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Clay Pottery Set</h5>
+                            <p class="card-text text-muted">Traditional clay pottery set</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-warning mb-0">Rs. 2,200</span>
+                                <button class="btn btn-warning btn-sm">
+                                    <i class="bi bi-cart-plus me-1"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 product-item" data-category="baskets">
+                    <div class="card h-100 shadow-sm product-card">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://images.pexels.com/photos/4099103/pexels-photo-4099103.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                                 class="card-img-top product-image" alt="Handwoven Basket">
+                            <div class="product-overlay">
+                                <button class="btn btn-light btn-sm rounded-circle me-2">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                                <button class="btn btn-light btn-sm rounded-circle">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Handwoven Basket</h5>
+                            <p class="card-text text-muted">Traditional handwoven basket</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-warning mb-0">Rs. 1,500</span>
+                                <button class="btn btn-warning btn-sm">
+                                    <i class="bi bi-cart-plus me-1"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="display-4 fw-bold mb-4">About Kandu Pinnawala</h2>
+                    <p class="lead mb-4">
+                        For over two decades, Kandu Pinnawala has been a beacon of authentic Sri Lankan craftsmanship, preserving traditional art forms while bringing them to the modern world.
+                    </p>
+                    <p class="mb-4">
+                        Founded in the cultural heart of Sri Lanka, our shop represents the culmination of centuries-old traditions. We work directly with skilled artisans from across the island, ensuring fair trade practices and helping preserve these invaluable cultural treasures for future generations.
+                    </p>
+
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0 me-3">
+                                    <div class="bg-warning bg-opacity-25 p-3 rounded">
+                                        <i class="bi bi-people-fill text-warning fs-4"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5>Master Artisans</h5>
+                                    <p class="text-muted small">Our skilled craftspeople have been perfecting their art for generations.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0 me-3">
+                                    <div class="bg-warning bg-opacity-25 p-3 rounded">
+                                        <i class="bi bi-award-fill text-warning fs-4"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5>Quality Guaranteed</h5>
+                                    <p class="text-muted small">Every product undergoes rigorous quality checks.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0 me-3">
+                                    <div class="bg-warning bg-opacity-25 p-3 rounded">
+                                        <i class="bi bi-heart-fill text-warning fs-4"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5>Made with Love</h5>
+                                    <p class="text-muted small">Each piece is crafted with passion and care.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0 me-3">
+                                    <div class="bg-warning bg-opacity-25 p-3 rounded">
+                                        <i class="bi bi-globe text-warning fs-4"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5>Global Reach</h5>
+                                    <p class="text-muted small">We ship our authentic handicrafts worldwide.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <img src="C:\Users\Admin\Desktop\project\image\WhatsApp Image 2025-07-04 at 16.08.43_3a17b7c3.jpg"?auto=compress&cs=tinysrgb&w=600
+                                 alt="Artisan at work" class="img-fluid rounded shadow">
+                            <img src="C:\Users\Admin\Desktop\project\image\wood carving1.jpg"?auto=compress&cs=tinysrgb&w=600
+                                 alt="Traditional crafts" class="img-fluid rounded shadow mt-3">
+                        </div>
+                        <div class="col-6 mt-5">
+                            <img src="C:\Users\Admin\Desktop\project\image\WhatsApp Image 2025-07-04 at 16.12.14_b9d92e99.jpg"?auto=compress&cs=tinysrgb&w=600
+                                 alt="Handicraft workshop" class="img-fluid rounded shadow">
+                            <img src="C:\Users\Admin\Desktop\project\image\869d571945fcab1492ac4096aa4edc62.jpg"?auto=compress&cs=tinysrgb&w=600
+                                 alt="Pottery making" class="img-fluid rounded shadow mt-3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bold mb-3">Our Services</h2>
+                <p class="lead">Beyond our beautiful products, we offer comprehensive services to enhance your handicraft experience.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 text-center border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="bg-warning bg-opacity-25 p-3 rounded-circle d-inline-flex mb-3">
+                                <i class="bi bi-palette-fill text-warning fs-3"></i>
+                            </div>
+                            <h5 class="card-title">Custom Design</h5>
+                            <p class="card-text text-muted">Create personalized handicrafts tailored to your specific needs and preferences.</p>
+                            <ul class="list-unstyled small text-muted">
+                                <li><i class="bi bi-dot text-warning"></i> Personal consultation</li>
+                                <li><i class="bi bi-dot text-warning"></i> Unique designs</li>
+                                <li><i class="bi bi-dot text-warning"></i> Quality materials</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 text-center border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="bg-warning bg-opacity-25 p-3 rounded-circle d-inline-flex mb-3">
+                                <i class="bi bi-gift-fill text-warning fs-3"></i>
+                            </div>
+                            <h5 class="card-title">Gift Wrapping</h5>
+                            <p class="card-text text-muted">Beautiful, eco-friendly gift wrapping services for all occasions.</p>
+                            <ul class="list-unstyled small text-muted">
+                                <li><i class="bi bi-dot text-warning"></i> Sustainable materials</li>
+                                <li><i class="bi bi-dot text-warning"></i> Custom messages</li>
+                                <li><i class="bi bi-dot text-warning"></i> Professional presentation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 text-center border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="bg-warning bg-opacity-25 p-3 rounded-circle d-inline-flex mb-3">
+                                <i class="bi bi-truck text-warning fs-3"></i>
+                            </div>
+                            <h5 class="card-title">Worldwide Shipping</h5>
+                            <p class="card-text text-muted">Safe and secure delivery of your precious handicrafts anywhere in the world.</p>
+                            <ul class="list-unstyled small text-muted">
+                                <li><i class="bi bi-dot text-warning"></i> Secure packaging</li>
+                                <li><i class="bi bi-dot text-warning"></i> Insurance coverage</li>
+                                <li><i class="bi bi-dot text-warning"></i> Tracking available</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 text-center border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="bg-warning bg-opacity-25 p-3 rounded-circle d-inline-flex mb-3">
+                                <i class="bi bi-arrow-clockwise text-warning fs-3"></i>
+                            </div>
+                            <h5 class="card-title">Restoration Services</h5>
+                            <p class="card-text text-muted">Expert restoration and repair services for damaged or aged handicrafts.</p>
+                            <ul class="list-unstyled small text-muted">
+                                <li><i class="bi bi-dot text-warning"></i> Professional assessment</li>
+                                <li><i class="bi bi-dot text-warning"></i> Traditional techniques</li>
+                                <li><i class="bi bi-dot text-warning"></i> Quality guarantee</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mt-5">
+                <div class="bg-warning rounded-3 p-5 text-white">
+                    <h3 class="fw-bold mb-3">Need a Custom Service?</h3>
+                    <p class="mb-4">Have a special request or need something unique? Our expert team is here to help you create something extraordinary.</p>
+                    <a href="#contact" class="btn btn-light btn-lg">Contact Us Today</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bold mb-3">Get in Touch</h2>
+                <p class="lead">We'd love to hear from you. Visit our shop, give us a call, or send us a message.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="mb-4">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-warning bg-opacity-25 p-3 rounded me-3">
+                                <i class="bi bi-geo-alt-fill text-warning fs-5"></i>
+                            </div>
+                            <div>
+                                <h5>Visit Our Shop</h5>
+                                <p class="text-muted mb-1">123 Handicraft Street, Pinnawala, Sri Lanka</p>
+                                <small class="text-muted">Open 7 days a week</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-warning bg-opacity-25 p-3 rounded me-3">
+                                <i class="bi bi-telephone-fill text-warning fs-5"></i>
+                            </div>
+                            <div>
+                                <h5>Call Us</h5>
+                                <p class="text-muted mb-1">+94 11 234 5678</p>
+                                <small class="text-muted">Mon-Sat: 9 AM - 6 PM</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-warning bg-opacity-25 p-3 rounded me-3">
+                                <i class="bi bi-envelope-fill text-warning fs-5"></i>
+                            </div>
+                            <div>
+                                <h5>Email Us</h5>
+                                <p class="text-muted mb-1">info@kandupinnawala.com</p>
+                                <small class="text-muted">We reply within 24 hours</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-warning bg-opacity-25 p-3 rounded me-3">
+                                <i class="bi bi-clock-fill text-warning fs-5"></i>
+                            </div>
+                            <div>
+                                <h5>Shop Hours</h5>
+                                <p class="text-muted mb-1">9:00 AM - 6:00 PM</p>
+                                <small class="text-muted">Monday to Saturday</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Follow Us</h5>
+                            <p class="card-text text-muted">Stay updated with our latest products and offers</p>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-primary btn-sm">
+                                    <i class="bi bi-facebook"></i>
+                                </button>
+                                <button class="btn btn-danger btn-sm">
+                                    <i class="bi bi-instagram"></i>
+                                </button>
+                                <button class="btn btn-success btn-sm">
+                                    <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="firstName" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" id="firstName" placeholder="John">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="lastName" class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" id="lastName" placeholder="Doe">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="email" class="form-label">Email Address</label>
+                                        <input type="email" class="form-control" id="email" placeholder="john@example.com">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="phone" class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phone" placeholder="+94 11 234 5678">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="subject" class="form-label">Subject</label>
+                                        <select class="form-select" id="subject">
+                                            <option>General Inquiry</option>
+                                            <option>Product Question</option>
+                                            <option>Custom Order</option>
+                                            <option>Wholesale Inquiry</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="message" class="form-label">Message</label>
+                                        <textarea class="form-control" id="message" rows="5" placeholder="Tell us about your inquiry..."></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-warning btn-lg w-100">
+                                            <i class="bi bi-send me-2"></i>Send Message
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3">
+                    <div class="d-flex align-items-center mb-3">
+                         <img src="C:\Users\Admin\Desktop\project\image\logo-removebg-preview.png" style="height: 40px;" class="me-2">
+                        <span class="h4 mb-0">Kandu Pinnawala</span>
+                    </div>
+                    <p class="text-muted">
+                        Preserving Sri Lankan heritage through authentic handicrafts. Every piece tells a story of tradition, culture, and skilled craftsmanship.
+                    </p>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-primary btn-sm">
+                            <i class="bi bi-facebook"></i>
+                        </button>
+                        <button class="btn btn-danger btn-sm">
+                            <i class="bi bi-instagram"></i>
+                        </button>
+                        <button class="btn btn-info btn-sm">
+                            <i class="bi bi-twitter"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-muted text-decoration-none">Home</a></li>
+                        <li><a href="#products" class="text-muted text-decoration-none">Products</a></li>
+                        <li><a href="#about" class="text-muted text-decoration-none">About Us</a></li>
+                        <li><a href="#services" class="text-muted text-decoration-none">Services</a></li>
+                        <li><a href="#contact" class="text-muted text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="mb-3">Categories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-muted text-decoration-none">Wooden Masks</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Pottery</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Batik Art</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Carvings</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Baskets</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="mb-3">Contact Info</h5>
+                    <div class="d-flex align-items-start mb-2">
+                        <i class="bi bi-geo-alt-fill text-warning me-2 mt-1"></i>
+                        <div>
+                            <div class="text-muted">123 Handicraft Street</div>
+                            <div class="text-muted">Pinnawala, Sri Lanka</div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-2">
+                        <i class="bi bi-telephone-fill text-warning me-2"></i>
+                        <span class="text-muted">+94 11 234 5678</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-envelope-fill text-warning me-2"></i>
+                        <span class="text-muted">info@kandupinnawala.com</span>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-muted mb-0">© 2024 Kandu Pinnawala. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-muted text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-muted text-decoration-none me-3">Terms of Service</a>
+                    <a href="#" class="text-muted text-decoration-none">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
