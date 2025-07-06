@@ -1,10 +1,94 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ArrowRight, Star } from 'lucide-react';
 
 const Hero: React.FC = () => {
+  useEffect(() => {
+    // Create floating masks animation for the hero section
+    const createFloatingMasks = () => {
+      try {
+        // Remove existing floating masks if any
+        const existingMasks = document.querySelector('.floating-masks-hero');
+        if (existingMasks) {
+          existingMasks.remove();
+        }
+
+        const floatingContainer = document.createElement('div');
+        floatingContainer.className = 'floating-masks-hero';
+        
+        // Traditional Sri Lankan cultural symbols
+        const maskSymbols = [
+          '🎭', // Theater mask
+          '👺', // Traditional mask
+          '🎪', // Cultural symbol
+          '🎨', // Artist palette
+          '🏺', // Pottery
+          '🎭', // Theater mask
+          '👹', // Ogre mask
+          '🎪', // Cultural tent
+          '🎨', // Artist palette
+          '🏺', // Amphora
+          '🎭', // Theater mask
+          '👺'  // Traditional mask
+        ];
+        
+        // Create floating mask elements
+        for (let i = 0; i < 12; i++) {
+          const mask = document.createElement('div');
+          mask.className = 'floating-mask';
+          mask.textContent = maskSymbols[i];
+          
+          // Add random animation classes for variety
+          if (i % 3 === 0) {
+            mask.classList.add('pulse-animation');
+          } else if (i % 4 === 0) {
+            mask.classList.add('sway-animation');
+          }
+          
+          floatingContainer.appendChild(mask);
+        }
+        
+        // Find the hero section and append the floating masks
+        const heroSection = document.getElementById('home');
+        if (heroSection) {
+          heroSection.appendChild(floatingContainer);
+        } else {
+          console.warn('Hero section not found');
+        }
+      } catch (error) {
+        console.error('Error creating floating masks:', error);
+      }
+    };
+
+    // Small delay to ensure DOM is ready
+    const timer = setTimeout(createFloatingMasks, 100);
+
+    // Cleanup function to remove floating masks when component unmounts
+    return () => {
+      clearTimeout(timer);
+      const floatingMasks = document.querySelector('.floating-masks-hero');
+      if (floatingMasks) {
+        floatingMasks.remove();
+      }
+    };
+  }, []);
+
+  const handleExploreProducts = () => {
+    const productsSection = document.getElementById('products');
+    if (productsSection) {
+      productsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleLearnStory = () => {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section id="home" className="min-h-screen flex items-center pt-16 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-gray-900 dark:to-gray-800">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="home" className="min-h-screen flex items-center pt-16 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-gray-900 dark:to-gray-800 relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="space-y-8">
@@ -31,12 +115,18 @@ const Hero: React.FC = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center space-x-2 group">
+              <button 
+                onClick={handleExploreProducts}
+                className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center space-x-2 group"
+              >
                 <span>Explore Products</span>
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
               </button>
               
-              <button className="border-2 border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              <button 
+                onClick={handleLearnStory}
+                className="border-2 border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"
+              >
                 Learn Our Story
               </button>
             </div>

@@ -1,6 +1,9 @@
 // JavaScript for Kandu Pinnawala Website
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Create floating masks animation
+    createFloatingMasks();
+    
     // Theme Toggle Functionality
     const themeToggle = document.getElementById('themeToggle');
     const themeIcon = document.getElementById('themeIcon');
@@ -220,6 +223,129 @@ document.addEventListener('DOMContentLoaded', function() {
         return new bootstrap.Tooltip(tooltipTriggerEl);
     });
 });
+
+// Create Floating Masks Animation
+function createFloatingMasks() {
+    const floatingContainer = document.createElement('div');
+    floatingContainer.className = 'floating-masks';
+    
+    // ===== OPTION 1: EMOJI SYMBOLS (Current) =====
+    // Traditional Sri Lankan mask symbols (using Unicode characters and emojis)
+    const maskSymbols = [
+        '🎭', // Theater mask
+        '👺', // Japanese mask (similar style)
+        '🎪', // Circus tent (cultural symbol)
+        '🎨', // Artist palette
+        '🏺', // Amphora (pottery)
+        '🎭', // Theater mask
+        '👹', // Ogre mask
+        '🎪', // Circus tent
+        '🎨', // Artist palette
+        '🏺', // Amphora
+        '🎭', // Theater mask
+        '👺'  // Japanese mask
+    ];
+    
+   
+    
+    // ===== OPTION 3: CULTURAL SYMBOLS =====
+    // Uncomment this for more cultural symbols
+    /*
+    const maskSymbols = [
+        '🪔', // Diya lamp
+        '🕉️', // Om symbol
+        '☸️', // Dharma wheel
+        '🏛️', // Classical building
+        '🎋', // Tanabata tree
+        '🪷', // Lotus
+        '🎎', // Japanese dolls
+        '🏺', // Amphora
+        '🎨', // Artist palette
+        '🎭', // Theater mask
+        '🪔', // Diya lamp
+        '🕉️'  // Om symbol
+    ];
+    */
+    
+    // ===== OPTION 4: NATURE SYMBOLS =====
+    // Uncomment this for nature-themed symbols
+    /*
+    const maskSymbols = [
+        '🌸', '🌺', '🌻', '🌷', '🌹', '🌼',
+        '🍃', '🌿', '🌱', '🌾', '🌸', '🌺'
+    ];
+    */
+    
+    // ===== OPTION 5: GEOMETRIC PATTERNS =====
+    // Uncomment this for geometric patterns
+    /*
+    const maskSymbols = [
+        '◆', '◇', '◈', '◉', '◎', '●',
+        '■', '□', '▲', '△', '▼', '▽'
+    ];
+    */
+    
+    // Create floating mask elements
+    for (let i = 0; i < 12; i++) {
+        const mask = document.createElement('div');
+        mask.className = 'mask';
+        mask.textContent = maskSymbols[i];
+        
+        // Add random animation classes for variety
+        if (i % 3 === 0) {
+            mask.classList.add('pulse');
+        } else if (i % 4 === 0) {
+            mask.classList.add('sway');
+        }
+        
+        floatingContainer.appendChild(mask);
+    }
+    
+    document.body.appendChild(floatingContainer);
+}
+
+// Alternative function to use actual images instead of symbols
+function createFloatingImages() {
+    const floatingContainer = document.createElement('div');
+    floatingContainer.className = 'floating-masks';
+    /*
+    // Array of image URLs for floating elements
+    const imageUrls = [
+        'https://images.pexels.com/photos/8828408/pexels-photo-8828408.jpeg?auto=compress&cs=tinysrgb&w=100',
+        'https://images.pexels.com/photos/5691437/pexels-photo-5691437.jpeg?auto=compress&cs=tinysrgb&w=100',
+        'https://images.pexels.com/photos/1071882/pexels-photo-1071882.jpeg?auto=compress&cs=tinysrgb&w=100',
+        'https://images.pexels.com/photos/4099102/pexels-photo-4099102.jpeg?auto=compress&cs=tinysrgb&w=100',
+        'https://images.pexels.com/photos/8828409/pexels-photo-8828409.jpeg?auto=compress&cs=tinysrgb&w=100',
+        'https://images.pexels.com/photos/4099103/pexels-photo-4099103.jpeg?auto=compress&cs=tinysrgb&w=100'
+    ];
+    */
+    // Create floating image elements
+    for (let i = 0; i < 12; i++) {
+        const mask = document.createElement('div');
+        mask.className = 'mask image-mask';
+        
+        const img = document.createElement('img');
+        img.src = imageUrls[i % imageUrls.length];
+        img.alt = 'Floating handicraft';
+        img.style.width = '100%';
+        img.style.height = '100%';
+        img.style.objectFit = 'cover';
+        img.style.borderRadius = '50%';
+        
+        mask.appendChild(img);
+        
+        // Add random animation classes for variety
+        if (i % 3 === 0) {
+            mask.classList.add('pulse');
+        } else if (i % 4 === 0) {
+            mask.classList.add('sway');
+        }
+        
+        floatingContainer.appendChild(mask);
+    }
+    
+    document.body.appendChild(floatingContainer);
+}
 
 // Utility Functions
 

@@ -24,6 +24,176 @@ body {
     color: #1e40af;
     background-color: var(--light-bg);
     transition: var(--transition);
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Floating Masks Background Animation */
+.floating-masks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.mask {
+    position: absolute;
+    opacity: 0.1;
+    animation: float 20s infinite linear;
+    font-size: 3rem;
+    color: var(--primary-color);
+    transform-origin: center;
+}
+
+.mask:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+    animation-duration: 25s;
+    font-size: 2.5rem;
+}
+
+.mask:nth-child(2) {
+    left: 20%;
+    animation-delay: -5s;
+    animation-duration: 30s;
+    font-size: 3.5rem;
+}
+
+.mask:nth-child(3) {
+    left: 30%;
+    animation-delay: -10s;
+    animation-duration: 22s;
+    font-size: 2.8rem;
+}
+
+.mask:nth-child(4) {
+    left: 40%;
+    animation-delay: -15s;
+    animation-duration: 28s;
+    font-size: 3.2rem;
+}
+
+.mask:nth-child(5) {
+    left: 50%;
+    animation-delay: -20s;
+    animation-duration: 26s;
+    font-size: 2.7rem;
+}
+
+.mask:nth-child(6) {
+    left: 60%;
+    animation-delay: -25s;
+    animation-duration: 24s;
+    font-size: 3.8rem;
+}
+
+.mask:nth-child(7) {
+    left: 70%;
+    animation-delay: -30s;
+    animation-duration: 32s;
+    font-size: 2.9rem;
+}
+
+.mask:nth-child(8) {
+    left: 80%;
+    animation-delay: -35s;
+    animation-duration: 27s;
+    font-size: 3.3rem;
+}
+
+.mask:nth-child(9) {
+    left: 90%;
+    animation-delay: -40s;
+    animation-duration: 29s;
+    font-size: 2.6rem;
+}
+
+.mask:nth-child(10) {
+    left: 5%;
+    animation-delay: -45s;
+    animation-duration: 31s;
+    font-size: 3.6rem;
+}
+
+.mask:nth-child(11) {
+    left: 15%;
+    animation-delay: -50s;
+    animation-duration: 23s;
+    font-size: 2.4rem;
+}
+
+.mask:nth-child(12) {
+    left: 85%;
+    animation-delay: -55s;
+    animation-duration: 33s;
+    font-size: 3.1rem;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) rotate(0deg) scale(0.8);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.1;
+    }
+    90% {
+        opacity: 0.1;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg) scale(1.2);
+        opacity: 0;
+    }
+}
+
+/* Pulsing animation for some masks */
+.mask.pulse {
+    animation: float 20s infinite linear, pulse 4s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Swaying animation for variety */
+.mask.sway {
+    animation: float 20s infinite linear, sway 6s infinite ease-in-out;
+}
+
+@keyframes sway {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+}
+
+/* Dark mode adjustments for masks */
+body.dark-mode .mask {
+    color: #60a5fa;
+    opacity: 0.08;
+}
+
+/* Reduce animation on mobile for performance */
+@media (max-width: 768px) {
+    .mask {
+        font-size: 2rem;
+        opacity: 0.05;
+    }
+    
+    .mask:nth-child(n+7) {
+        display: none;
+    }
 }
 
 /* Light Mode Styles */
@@ -144,6 +314,7 @@ html {
     display: flex;
     align-items: center;
     padding-top: 80px;
+    position: relative;
 }
 
 body.dark-mode .hero-section {
@@ -160,7 +331,7 @@ body.dark-mode .hero-content h1 {
     color: #f9fafb;
 }
 
-/* Hero Image Styles */
+/* Hero Image Styles - CUSTOMIZABLE SIZES */
 .hero-image {
     position: relative;
     margin-bottom: 3rem;
@@ -178,8 +349,64 @@ body.dark-mode .hero-content h1 {
     z-index: -1;
 }
 
+/* 
+HERO IMAGE SIZE OPTIONS - Uncomment the size you want:
+
+Option 1: Small (300x250)
+*/
 .hero-main-image {
-    max-width: 2000px;
+    max-width: 5000px;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+    transition: transform 0.3s ease;
+}
+
+/* 
+Option 2: Medium (400x320) - Uncomment to use
+.hero-main-image {
+    max-width: 400px;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+    transition: transform 0.3s ease;
+}
+*/
+
+/* 
+Option 3: Large (600x480) - Uncomment to use
+.hero-main-image {
+    max-width: 600px;
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+    transition: transform 0.3s ease;
+}
+*/
+
+/* 
+Option 4: Extra Large (800x600) - Uncomment to use
+.hero-main-image {
+    max-width: 800px;
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+    transition: transform 0.3s ease;
+}
+*/
+
+/* 
+Option 5: Square (400x400) - Uncomment to use
+.hero-main-image {
+    max-width: 400px;
     width: 100%;
     height: 400px;
     object-fit: cover;
@@ -187,6 +414,20 @@ body.dark-mode .hero-content h1 {
     box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
     transition: transform 0.3s ease;
 }
+*/
+
+/* 
+Option 6: Wide (700x350) - Uncomment to use
+.hero-main-image {
+    max-width: 700px;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+    transition: transform 0.3s ease;
+}
+*/
 
 .hero-main-image:hover {
     transform: scale(1.02);
@@ -406,9 +647,10 @@ body.dark-mode ::-webkit-scrollbar-track {
         padding: 60px 0;
     }
 
+    /* Mobile responsive image sizes */
     .hero-main-image {
-        max-width: 350px;
-        height: 300px;
+        max-width: 280px;
+        height: 220px;
     }
 }
 
@@ -425,9 +667,10 @@ body.dark-mode ::-webkit-scrollbar-track {
         padding-top: 120px;
     }
 
+    /* Small mobile responsive image sizes */
     .hero-main-image {
-        max-width: 300px;
-        height: 250px;
+        max-width: 250px;
+        height: 200px;
     }
 }
 
