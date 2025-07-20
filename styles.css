@@ -307,36 +307,61 @@ html {
     color: var(--primary-color) !important;
 }
 
+
+:root {
+    --primary-color: #3b82f6; 
+    --primary-light: #60a5fa; 
+    --dark-bg: #1f2937; 
+    --dark-card: #374151; 
+}
+
 /* Hero Section */
 .hero-section {
     background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 50%, #93c5fd 100%);
     min-height: 100vh;
     display: flex;
-    align-items: center;
-    padding-top: 80px;
+    flex-direction: column; 
+    align-items: center; 
+    padding-top: 80px; 
     position: relative;
+    justify-content: center; 
+    text-align: center; 
 }
 
 body.dark-mode .hero-section {
     background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-card) 100%);
 }
 
+.hero-content {
+    max-width: 800px; 
+    margin: 0 auto 30px auto; 
+    padding: 0 20px; 
+}
+
 .hero-content h1 {
     font-weight: 700;
     line-height: 1.2;
     color: #1e40af;
+    margin-bottom: 20px;
+    font-size: 3.5rem; 
 }
 
 body.dark-mode .hero-content h1 {
     color: #f9fafb;
 }
 
-/* Hero Image Styles - CUSTOMIZABLE SIZES */
-.hero-image {
+
+.hero-image { 
     position: relative;
     margin-bottom: 3rem;
+    max-width: 900px; 
+    width: 90%; 
+    height: auto; 
+    margin-left: auto; 
+    margin-right: auto; 
 }
 
+/* The decorative background behind the image */
 .hero-image-bg {
     position: absolute;
     top: -10px;
@@ -349,85 +374,16 @@ body.dark-mode .hero-content h1 {
     z-index: -1;
 }
 
-/* 
-HERO IMAGE SIZE OPTIONS - Uncomment the size you want:
-
-Option 1: Small (300x250)
-*/
+/* Main Image Styles */
 .hero-main-image {
-    max-width: 5000px;
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
+    max-width: 100%;   
+    height: auto;     
     border-radius: 15px;
     box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
     transition: transform 0.3s ease;
+    display: block; 
+    margin: 0 auto; 
 }
-
-/* 
-Option 2: Medium (400x320) - Uncomment to use
-.hero-main-image {
-    max-width: 400px;
-    width: 100%;
-    height: 320px;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
-    transition: transform 0.3s ease;
-}
-*/
-
-/* 
-Option 3: Large (600x480) - Uncomment to use
-.hero-main-image {
-    max-width: 600px;
-    width: 100%;
-    height: 480px;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
-    transition: transform 0.3s ease;
-}
-*/
-
-/* 
-Option 4: Extra Large (800x600) - Uncomment to use
-.hero-main-image {
-    max-width: 800px;
-    width: 100%;
-    height: 600px;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
-    transition: transform 0.3s ease;
-}
-*/
-
-/* 
-Option 5: Square (400x400) - Uncomment to use
-.hero-main-image {
-    max-width: 400px;
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
-    transition: transform 0.3s ease;
-}
-*/
-
-/* 
-Option 6: Wide (700x350) - Uncomment to use
-.hero-main-image {
-    max-width: 700px;
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
-    transition: transform 0.3s ease;
-}
-*/
 
 .hero-main-image:hover {
     transform: scale(1.02);
@@ -435,6 +391,31 @@ Option 6: Wide (700x350) - Uncomment to use
 
 body.dark-mode .hero-main-image {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Basic responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .hero-section {
+        padding-top: 60px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-image {
+        max-width: 95%; 
+    }
+
+    .hero-main-image {
+     
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
 }
 
 /* Product Cards */
@@ -544,31 +525,49 @@ body.dark-mode .product-card:hover {
     background-color: rgba(59, 130, 246, 0.25) !important;
 }
 
-/* Footer Styles */
-footer {
-    background-color: #1e40af !important;
-    color: #f9fafb !important;
+/* Social button hover effect */
+footer .btn {
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-footer .text-light {
-    color: #f9fafb !important;
+footer .btn:hover {
+  transform: scale(1.15);
+  opacity: 0.9;
 }
 
-footer .text-muted {
-    color: #cbd5e1 !important;
+/* Footer links hover animation */
+footer a.text-muted {
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-footer a {
-    color: #e2e8f0 !important;
-    transition: var(--transition);
+footer a.text-muted:hover {
+  color: #0d6efd; /* Bootstrap primary or choose any color */
 }
 
-footer a:hover {
-    color: #60a5fa !important;
+/* Underline slide effect */
+footer a.text-muted::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 0%;
+  background-color: #0d6efd;
+  transition: width 0.3s ease;
 }
 
-footer h4, footer h5 {
-    color: #f9fafb !important;
+footer a.text-muted:hover::after {
+  width: 100%;
+}
+
+/* Optional: hover effect for contact icons */
+footer i.bi {
+  transition: transform 0.3s ease;
+}
+
+footer i.bi:hover {
+  transform: scale(1.2);
 }
 
 /* Dark mode footer adjustments */
@@ -647,10 +646,10 @@ body.dark-mode ::-webkit-scrollbar-track {
         padding: 60px 0;
     }
 
-    /* Mobile responsive image sizes */
+    /* Mobile responsive image sizes - UPDATED for larger size */
     .hero-main-image {
-        max-width: 280px;
-        height: 220px;
+        max-width: 500px;
+        height: 400px;
     }
 }
 
@@ -667,10 +666,10 @@ body.dark-mode ::-webkit-scrollbar-track {
         padding-top: 120px;
     }
 
-    /* Small mobile responsive image sizes */
+    /* Small mobile responsive image sizes - UPDATED for larger size */
     .hero-main-image {
-        max-width: 250px;
-        height: 200px;
+        max-width: 400px;
+        height: 320px;
     }
 }
 
